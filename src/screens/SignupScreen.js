@@ -9,6 +9,10 @@ const SignupScreen = ({ navigation }) => {
         title="Go to signin Screen"
         onPress={() => navigation.navigate("Signin")}
       />
+      <Button
+        title="Go to mainFlow"
+        onPress={() => navigation.navigate("mainFlow")}
+      />
     </View>
   );
 };
