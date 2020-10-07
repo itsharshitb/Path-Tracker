@@ -11,7 +11,7 @@ const SignupScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <AuthForm
-        headerText="Sign Up for Tracker"
+        headerText="Sign Up For Tracker"
         errorMessage={state.errorMessage}
         submitButtonText="Sign Up"
         onSubmit={({ email, password }) => signup({ email, password })}
@@ -24,10 +24,8 @@ const SignupScreen = ({ navigation }) => {
   );
 };
 
-SignupScreen.navigationOptions = () => {
-  return {
-    header: () => null,
-  };
+SignupScreen.navigationOptions = {
+  header: null,
 };
 
 const styles = StyleSheet.create({
