@@ -1,4 +1,5 @@
-import { AsyncStorage } from "@react-native-community/async-storage";
+//import { AsyncStorage } from "@react-native-community/async-storage";
+import { AsyncStorage } from "react-native";
 import createDataContext from "./createDataContext";
 import trackerApi from "../api/tracker";
 import { navigate } from "../navigationRef";
@@ -26,7 +27,7 @@ const signup = (dispatch) => async ({ email, password }) => {
     //navigate inside mainflow
     navigate("TrackList");
   } catch (err) {
-    console.log(err);
+    console.log(err.response.data);
     dispatch({
       type: "add_error",
       payload: "Something went wrong with signup",
