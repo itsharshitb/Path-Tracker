@@ -14,6 +14,8 @@ import TrackListScreen from "./src/screens/TrackListScreen";
 //context provider
 import { Provider as AuthProvider } from "./src/context/AuthContext";
 import { exp } from "react-native-reanimated";
+//for navigation from signup to main flow
+import { setNavigator } from "./src/navigationRef";
 
 //Virtual flow is present in flowDigram directory
 
@@ -37,7 +39,11 @@ const App = createAppContainer(switchNavigator);
 export default () => {
   return (
     <AuthProvider>
-      <App />
+      <App
+        ref={(navigator) => {
+          setNavigator(navigator);
+        }}
+      />
     </AuthProvider>
   );
 };

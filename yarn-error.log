@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-reanimated@~1.13.0
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @react-native-community/async-storage@~1.12.0
 
 PATH: 
   C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python38\Scripts\;C:\Python38\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\MinGW\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Java\jdk-15\bin;C:\Users\Harshit\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\Harshit\AppData\Local\Programs\Python\Python37-32\;C:\Users\Harshit\AppData\Local\Microsoft\WindowsApps;C:\Users\Harshit\AppData\Local\GitHubDesktop\bin;C:\Users\Harshit\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\bin;;C:\Users\Harshit\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Harshit\AppData\Roaming\npm;C:\Users\Harshit\AppData\Local\Yarn\bin
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'D:\project\reactnative\tracker\node_modules\@babel\generator\node_modules\.bin'
+  Error: EPERM: operation not permitted, unlink 'D:\project\reactnative\tracker\node_modules\@babel\helper-compilation-targets\node_modules\.bin'
 
 npm manifest: 
   {
