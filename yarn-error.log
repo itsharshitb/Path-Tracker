@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add global ngrok
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-reanimated@~1.13.0
 
 PATH: 
   C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python38\Scripts\;C:\Python38\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\MinGW\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Java\jdk-15\bin;C:\Users\Harshit\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\Harshit\AppData\Local\Programs\Python\Python37-32\;C:\Users\Harshit\AppData\Local\Microsoft\WindowsApps;C:\Users\Harshit\AppData\Local\GitHubDesktop\bin;C:\Users\Harshit\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2019.1.2\bin;;C:\Users\Harshit\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Harshit\AppData\Roaming\npm;C:\Users\Harshit\AppData\Local\Yarn\bin
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'D:\project\reactnative\tracker\node_modules\path-to-regexp\node_modules\isarray'
+  Error: EPERM: operation not permitted, unlink 'D:\project\reactnative\tracker\node_modules\@babel\generator\node_modules\.bin'
 
 npm manifest: 
   {
@@ -28,6 +28,7 @@ npm manifest:
     },
     "dependencies": {
       "@react-native-community/masked-view": "^0.1.10",
+      "axios": "^0.20.0",
       "expo": "~39.0.2",
       "expo-status-bar": "~1.0.2",
       "react": "16.13.1",
@@ -1653,6 +1654,13 @@ Lockfile:
     dependencies:
       array-filter "^1.0.0"
   
+  axios@^0.20.0:
+    version "0.20.0"
+    resolved "https://registry.yarnpkg.com/axios/-/axios-0.20.0.tgz#057ba30f04884694993a8cd07fa394cff11c50bd"
+    integrity sha512-ANA4rr2BDcmmAQLOKft2fufrtuvlqR+cXNNinUmvfeSNCOF98PZL+7M/v1zIdGo7OLjEA9J2gXJL+j4zGsl0bA==
+    dependencies:
+      follow-redirects "^1.10.0"
+  
   babel-plugin-dynamic-import-node@^2.3.3:
     version "2.3.3"
     resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-2.3.3.tgz#84fda19c976ec5c6defef57f9427b3def66e17a3"
@@ -2855,6 +2863,11 @@ Lockfile:
     dependencies:
       locate-path "^5.0.0"
       path-exists "^4.0.0"
+  
+  follow-redirects@^1.10.0:
+    version "1.13.0"
+    resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.0.tgz#b42e8d93a2a7eea5ed88633676d6597bc8e384db"
+    integrity sha512-aq6gF1BEKje4a9i9+5jimNFIpq4Q1WiwBToeRK5NvZBd/TRsmW8BsJfOEGkr76TbOyPVD3OVDN910EcUNtRYEA==
   
   fontfaceobserver@^2.1.0:
     version "2.1.0"
