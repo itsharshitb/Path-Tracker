@@ -10,9 +10,15 @@ const authReducer = (state, action) => {
       return { ...state, errorMessage: action.payload };
     case "signin": //both signin and signup is doing same work, so we have condenced down it
       return { errorMessage: "", token: action.payload };
+    case "clear_error_message":
+      return { ...state, errorMessage: "" };
     default:
       return state;
   }
+};
+
+const clearErrorMessage = (dispatch) => () => {
+  dispatch({ type: "clear_error_message" });
 };
 
 const signup = (dispatch) => async ({ email, password }) => {
@@ -27,7 +33,7 @@ const signup = (dispatch) => async ({ email, password }) => {
     //navigate inside mainflow
     navigate("TrackList");
   } catch (err) {
-    console.log(err.response.data);
+    //for checking errors console.log(err.response.data);
     dispatch({
       type: "add_error",
       payload: "Something went wrong with Signup",
@@ -45,6 +51,7 @@ const signin = (dispatch) => async ({ email, password }) => {
     dispatch({ type: "signin", payload: response.data.token });
     navigate("TrackList");
   } catch (err) {
+    //or checking errors console.log(err.response.data);
     dispatch({
       type: "add_error",
       payload: "Something went wrong with Signin",
@@ -60,6 +67,6 @@ const signout = (dispatch) => {
 
 export const { Provider, Context } = createDataContext(
   authReducer,
-  { signin, signout, signup },
+  { signin, signout, signup, clearErrorMessage },
   { itoken: null, errorMessage: "" }
 );
