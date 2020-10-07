@@ -26,6 +26,7 @@ const signup = (dispatch) => async ({ email, password }) => {
     //navigate inside mainflow
     navigate("TrackList");
   } catch (err) {
+    console.log(err);
     dispatch({
       type: "add_error",
       payload: "Something went wrong with signup",
