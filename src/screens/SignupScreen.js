@@ -41,7 +41,11 @@ const SignupScreen = ({ navigation }) => {
         <Button title="Sign Up" onPress={() => signup({ email, password })} />
       </Spacer>
       <TouchableOpacity onPress={() => navigation.navigate("Signin")}>
-        <Text>Already have an account? Signin instead</Text>
+        <Spacer>
+          <Text style={styles.link}>
+            Already have an account? Signin instead
+          </Text>
+        </Spacer>
       </TouchableOpacity>
     </View>
   );
@@ -63,6 +67,10 @@ const styles = StyleSheet.create({
   errorMessage: {
     fontSize: 16,
     color: "red",
+    textAlign: "center",
+  },
+  link: {
+    color: "blue",
     textAlign: "center",
   },
 });
