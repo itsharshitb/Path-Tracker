@@ -10,11 +10,7 @@ const SigninScreen = () => {
 
   return (
     <View style={styles.container}>
-      <NavigationEvents
-        onWillBlur={() => {
-          clearErrorMessage();
-        }}
-      />
+      <NavigationEvents onWillFocus={clearErrorMessage} />
       <Authform
         headerText="Sign in to your account"
         errorMessage={state.errorMessage}
@@ -27,7 +23,7 @@ const SigninScreen = () => {
 };
 
 SigninScreen.navigationOptions = {
-  header: null,
+  headerShown: false,
 };
 
 const styles = StyleSheet.create({
