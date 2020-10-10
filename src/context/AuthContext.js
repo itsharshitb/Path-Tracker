@@ -12,6 +12,8 @@ const authReducer = (state, action) => {
       return { errorMessage: "", token: action.payload };
     case "clear_error_message":
       return { ...state, errorMessage: "" };
+    case "signout":
+      return { token: null, errorMessage: "" };
     default:
       return state;
   }
@@ -33,7 +35,8 @@ const signup = (dispatch) => async ({ email, password }) => {
     //navigate inside mainflow
     navigate("TrackList");
   } catch (err) {
-    //for checking errors console.log(err.response.data);
+    //for checking errors
+    console.log(err.response.data);
     dispatch({
       type: "add_error",
       payload: "Something went wrong with Signup",
@@ -51,7 +54,8 @@ const signin = (dispatch) => async ({ email, password }) => {
     dispatch({ type: "signin", payload: response.data.token });
     navigate("TrackList");
   } catch (err) {
-    //or checking errors console.log(err.response.data);
+    //or checking errors
+    console.log(err.response.data);
     dispatch({
       type: "add_error",
       payload: "Something went wrong with Signin",
@@ -69,10 +73,11 @@ const tryLocalSignin = (dispatch) => async () => {
   }
 };
 
-const signout = (dispatch) => {
-  return () => {
-    //somehow sign out
-  };
+const signout = (dispatch) => async () => {
+  //somehow sign out
+  await AsyncStorage.removeItem("token");
+  dispatch({ type: "signout" });
+  navigate("loginFlow");
 };
 
 export const { Provider, Context } = createDataContext(
