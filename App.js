@@ -16,10 +16,13 @@ import { Provider as AuthProvider } from "./src/context/AuthContext";
 import { exp } from "react-native-reanimated";
 //for navigation from signup to main flow
 import { setNavigator } from "./src/navigationRef";
+//Loding screen
+import resolveAuthScreen from "./src/screens/resolveAuthScreen";
 
 //Virtual flow is present in flowDigram directory
 
 const switchNavigator = createSwitchNavigator({
+  ResolveAuth: resolveAuthScreen,
   loginFlow: createStackNavigator({
     Signup: SignupScreen,
     Signin: SigninScreen,
