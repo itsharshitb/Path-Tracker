@@ -7,13 +7,13 @@ const Map = () => {
   for(let i=0;i<20;i++){
     if(i%2 === 0){
       points.push({
-        latitude: 37.33233 + i * 0.001,
-       longitude: -122.03121 + i * 0.001
+        latitude: 28.9191122 + i * 0.001,
+       longitude: 79.9550414 + i * 0.001
       });
     }else{
       points.push({
-        latitude: 37.33233 - i * 0.001,
-       longitude: -122.03121 - i * 0.001
+        latitude: 28.9191122 - i * 0.001,
+       longitude: 79.9550414 - i * 0.001
       })
     }
   }
@@ -21,8 +21,8 @@ const Map = () => {
   return (
     <MapView style={styles.map} 
     initialRegion={{
-       latitude: 37.33233,
-       longitude: -122.03121,
+       latitude: 28.9191122,
+       longitude: 79.9550414,
        latitudeDelta: 0.01,
        longitudeDelta: 0.01
       }}>

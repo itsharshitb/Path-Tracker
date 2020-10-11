@@ -18,6 +18,8 @@ import { exp } from "react-native-reanimated";
 import { setNavigator } from "./src/navigationRef";
 //Loding screen
 import resolveAuthScreen from "./src/screens/resolveAuthScreen";
+//Location context
+import {Provider as LocationProvider} from "./src/context/LocationContext";
 
 //Virtual flow is present in flowDigram directory
 
@@ -41,6 +43,7 @@ const App = createAppContainer(switchNavigator);
 
 export default () => {
   return (
+    <LocationProvider>
     <AuthProvider>
       <App
         ref={(navigator) => {
@@ -48,5 +51,6 @@ export default () => {
         }}
       />
     </AuthProvider>
+    </LocationProvider>
   );
 };
