@@ -19,9 +19,9 @@ const Map = () => {
       }}>
       <Circle
       center={currentLocation.coords}
-      radius={30}
-      strokeColor="rgba(158, 158, 255, 1.0"
-      fillColor="rgba(158, 158, 255, 0.3"
+      radius={20}
+      strokeColor="rgba(255, 0, 0, 1.0)"
+      fillColor="rgba(255, 0, 0, 0.3)"
       />
       </MapView>
     );
