@@ -12,6 +12,7 @@ const locationReducer = (state, action) => {
 const startRecording = dispatch => () => {};
 const stopRecording = diapatch => () => {};
 const addLocation = dispatch => (location) => {
+    console.log('hi, there!');
     dispatch({ type: 'add_current_location', payload: location });
 };
 
