@@ -20,6 +20,8 @@ import { setNavigator } from "./src/navigationRef";
 import resolveAuthScreen from "./src/screens/resolveAuthScreen";
 //Location context
 import {Provider as LocationProvider} from "./src/context/LocationContext";
+//for saving tracks to api
+import {Provider as TrackProvider} from "./src/context/TrackContext";
 
 //Virtual flow is present in flowDigram directory
 
@@ -43,6 +45,7 @@ const App = createAppContainer(switchNavigator);
 
 export default () => {
   return (
+    <TrackProvider>
     <LocationProvider>
     <AuthProvider>
       <App
@@ -52,5 +55,6 @@ export default () => {
       />
     </AuthProvider>
     </LocationProvider>
+    </TrackProvider>
   );
 };

@@ -9,7 +9,7 @@ export default (shouldTrack, callback) => {
           const startWatching = async () => {
             try{
             await requestPermissionsAsync();
-            const subscriber = await watchPositionAsync({
+            subscriber = await watchPositionAsync({
               accuracy: Accuracy.BestForNavigation,
               timeInterval: 1000,
               distanceInterval: 10 
