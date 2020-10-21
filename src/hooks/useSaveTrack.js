@@ -4,10 +4,11 @@ import {Context as LocationContext} from "../context/LocationContext";
 
 export default () => {
     const {createTrack} = useContext(TrackContext);
-    const {state: {location, name}} = useContext(LocationContext);
+    const {state: {locations, name}} = useContext(LocationContext);
+    //console.log(locations.length);
     
-    const saveTrack = () => {
-        createTrack(name, location);
+    const saveTrack = () => { 
+        createTrack(name, locations);
     };
 
     return [saveTrack];
