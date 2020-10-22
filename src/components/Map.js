@@ -4,9 +4,13 @@ import MapView, {Polyline, Circle} from "react-native-maps";
 import {Context as LocationContext} from "../context/LocationContext";
 
 const Map = () => {
+<<<<<<< HEAD
   const {state: { currentLocation, locations }} = useContext(LocationContext);
   console.log(locations);
 
+=======
+  const {state: { currentLocation }} = useContext(LocationContext);
+>>>>>>> parent of 71719a6... added polyline in map.js
   if(!currentLocation){
     return <ActivityIndicator size= 'large' style={{marginTop: 200}}/>;
   }
@@ -24,7 +28,10 @@ const Map = () => {
       strokeColor="rgba(255, 0, 0, 1.0)"
       fillColor="rgba(255, 0, 0, 0.3)"
       />
+<<<<<<< HEAD
       <Polyline coordinates={locations.map(loc => loc.coords)} />
+=======
+>>>>>>> parent of 71719a6... added polyline in map.js
       </MapView>
     );
 };
